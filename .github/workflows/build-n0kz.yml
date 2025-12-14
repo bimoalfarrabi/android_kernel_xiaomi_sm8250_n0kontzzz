@@ -232,7 +232,7 @@ jobs:
             - **LTO**: ${{ github.event.inputs.USE_LTO_THIN == 'true' && 'THIN' || 'FULL' }}
             - **Patched**: ${{ github.event.inputs.KERNEL_PATCH == 'true' && 'YES' || 'NO' }}
 
-            **Download**: ZIP files di bawah untuk SUSFS & RKSU
+            **Download**: ZIP files below for SUSFS & RKSU
 
             [View Build Logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
           files: |
