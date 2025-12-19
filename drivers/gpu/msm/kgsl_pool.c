@@ -10,14 +10,14 @@
 #include <linux/scatterlist.h>
 #include <linux/swap.h>
 
-#ifdef CONFIG_LUNAR_SIGNATURE
-#include <linux/lunar_attributes.h>
+#ifdef CONFIG_N0KZ_SIGNATURE
+#include <linux/n0kz_attributes.h>
 #endif
 
 #include "kgsl_device.h"
 #include "kgsl_pool.h"
 #include "kgsl_sharedmem.h"
-#include <linux/lunar_attributes.h>
+#include <linux/n0kz_attributes.h>
 
 #define KGSL_MAX_POOLS 4
 #define KGSL_MAX_POOL_ORDER 8
@@ -346,7 +346,7 @@ int kgsl_pool_alloc_page(int *page_size, struct page **pages,
 	}
 
 done:
-	if (lunar_data.kgsl_skip_zeroing == 0)
+	if (n0kz_data.kgsl_skip_zeroing == 0)
 		kgsl_zero_page(page, order);
 	for (j = 0; j < (*page_size >> PAGE_SHIFT); j++) {
 		p = nth_page(page, j);
